@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="banner" src="jabba.jpg" alt="Banner" width="300">
+
+    <script>
+        function bannerRotater() {
+            var plaatjes = ['jabba.jpg', 'sigma.jpg', 'balls.jpg'];
+            var teller = 0;
+
+            function draaier() {
+                document.getElementById("banner").src = plaatjes[teller];
+
+                // Teller ophogen
+                teller++;
+
+                // Terug naar 0 als teller groter is dan array lengte
+                if (teller >= plaatjes.length) {
+                    teller = 0;
+                }
+            }
+
+            setInterval(draaier, 2000); // Start de rotatie
+        }
+
+        bannerRotater(); // Roep de functie aan om het te starten
+    </script>
+</body>
+</html>

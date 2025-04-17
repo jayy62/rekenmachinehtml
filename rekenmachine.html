@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekenmachine</title>
+</head>
+
+<body>
+    <script>
+        function rekenmachine() { 
+            
+            let getal1 = Number(prompt("Voer de eerste getal in:"));
+            const operator = prompt("Voer de operator in (+, -, *, /):");
+            let getal2 = Number(prompt("Voer de tweede getal in:"));
+
+            let resultaat;
+
+          
+            switch (operator) {
+                case "+":
+                    resultaat = getal1 + getal2;
+                    break;
+                case "-":
+                    resultaat = getal1 - getal2;
+                    break;
+                case "*":
+                    resultaat = getal1 * getal2;
+                    break;
+                case "/":
+                    resultaat = getal1 / getal2;
+                    break;
+                
+            }
+
+          
+            alert("Het resultaat is: " + resultaat);
+        }
+
+        
+        window.onload = rekenmachine;
+    </script>
+</body>
+
+</html>
